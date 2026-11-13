@@ -1,0 +1,5 @@
+model,TN,FP,FN,TP
+Logistic Regression,747,288,81,293
+Random Forest,930,105,193,181
+Gradient Boosting,938,97,181,193
+XGBoost,774,261,86,288

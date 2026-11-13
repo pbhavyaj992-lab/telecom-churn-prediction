@@ -1,0 +1,5 @@
+model,accuracy_pct,precision_pct,recall_pct,f1_pct,roc_auc,cv_roc_auc_train,test_n,test_churners,churners_caught_tp,churners_missed_fn
+Logistic Regression,73.8,50.4,78.3,61.4,0.84,0.85,1409,374,293,81
+Gradient Boosting,80.3,66.6,51.6,58.1,0.84,0.85,1409,374,193,181
+XGBoost,75.4,52.5,77.0,62.4,0.84,0.84,1409,374,288,86
+Random Forest,78.9,63.3,48.4,54.8,0.82,0.82,1409,374,181,193

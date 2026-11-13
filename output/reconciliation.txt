@@ -1,0 +1,11 @@
+TELECOM CHURN — RECONCILIATION (computed from the real file, 2026-11-13)
+raw rows: 7043
+duplicate rows: 0; duplicate customerIDs: 0
+blank TotalCharges values: 11 — all tenure 0, set to 0.00
+clean rows written: 7043 (no rows dropped)
+churned: 1869; stayed: 5174; churn rate: 26.54%
+Per-file scope (each output file sums only to its own defined total):
+churn_by_contract.csv / churn_by_internet.csv / churn_by_payment.csv / churn_by_tenure.csv: every customer appears once per file, so each file sums to 7,043 customers and 1,869 churned.
+churn_by_demographics_services.csv: one row per feature value; rows do not sum to the customer total (each customer appears once per feature).
+charges_by_segment.csv: 2 rows (stayed / churned), sums to 7,043.
+model_results.csv / confusion_matrices.csv / feature_importance.csv are written by scripts/02_train_models.py from the same clean file.

@@ -1,0 +1,15 @@
+customers: 7043
+churned: 1869
+stayed: 5174
+churn_rate_pct: 26.54
+blank_totalcharges_rows: 11
+blank_totalcharges_set_to_zero: 11
+duplicate_rows: 0
+avg_monthly_charges_usd: 64.76
+avg_monthly_charges_churned_usd: 74.44
+avg_monthly_charges_stayed_usd: 61.27
+avg_tenure_months_churned: 18.0
+avg_tenure_months_stayed: 37.6
+avg_total_charges_usd: 2279.73
+features_before_encoding: 19
+target: Churn (Yes/No)

@@ -1,0 +1,7 @@
+# Raw source data stays local.
+# Re-download with the links in README.md, then run scripts/01_clean_analyse.py.
+data/raw/*
+!data/raw/.gitkeep
+data/clean/*
+!data/clean/.gitkeep
+__pycache__/

@@ -1,0 +1,3 @@
+segment,customers,avg_monthly_charges_usd,median_monthly_charges_usd,avg_total_charges_usd,avg_tenure_months
+stayed,5174,61.27,64.43,2549.91,37.6
+churned,1869,74.44,79.65,1531.8,18.0

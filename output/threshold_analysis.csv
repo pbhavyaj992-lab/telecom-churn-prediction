@@ -1,0 +1,6 @@
+model,threshold,predicted_churners,recall_pct,precision_pct,accuracy_pct
+XGBoost,0.3,743,89.0,44.8,68.0
+XGBoost,0.35,682,85.6,46.9,70.5
+XGBoost,0.4,629,81.8,48.6,72.2
+XGBoost,0.45,596,80.2,50.3,73.7
+XGBoost,0.5,549,77.0,52.5,75.4

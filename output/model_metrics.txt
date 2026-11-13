@@ -1,0 +1,56 @@
+TELECOM CHURN — MODEL RESULTS (measured on the held-out test set, n=1,409, 80/20 stratified split, random_state=42)
+Class-weighted setup (recall-first):
+              model  accuracy_pct  precision_pct  recall_pct  f1_pct  roc_auc  cv_roc_auc_train  test_n  test_churners  churners_caught_tp  churners_missed_fn
+Logistic Regression          73.8           50.4        78.3    61.4     0.84              0.85    1409            374                 293                  81
+  Gradient Boosting          80.3           66.6        51.6    58.1     0.84              0.85    1409            374                 193                 181
+            XGBoost          75.4           52.5        77.0    62.4     0.84              0.84    1409            374                 288                  86
+      Random Forest          78.9           63.3        48.4    54.8     0.82              0.82    1409            374                 181                 193
+
+CONFUSION MATRICES (test set, class-weighted setup)
+              model  TN  FP  FN  TP
+Logistic Regression 747 288  81 293
+      Random Forest 930 105 193 181
+  Gradient Boosting 938  97 181 193
+            XGBoost 774 261  86 288
+
+UNWEIGHTED COMPARISON (same test set, no class weights) — verification against the presentation's classroom figures:
+              model  accuracy_pct  precision_pct  recall_pct  f1_pct  roc_auc
+Logistic Regression          80.6           65.7        55.9    60.4     0.84
+      Random Forest          78.9           62.8        50.5    56.0     0.82
+  Gradient Boosting          80.3           66.6        51.6    58.1     0.84
+            XGBoost          80.1           65.1        53.5    58.7     0.84
+Presentation reported: LR 80.1%, RF 82.6%, GB 83.4%, XGB 84.2% accuracy; AUC 0.84/0.85/0.86/0.86. Measured unweighted: LR 80.6%, RF 78.9%, GB 80.3%, XGB 80.1%; AUC 0.84/0.82/0.84/0.84. Only Logistic Regression reproduces closely. The repo reports measured figures, not the presentation's.
+
+THRESHOLD ANALYSIS — XGBoost (same test set, class-weighted)
+  model  threshold  predicted_churners  recall_pct  precision_pct  accuracy_pct
+XGBoost       0.30                 743        89.0           44.8          68.0
+XGBoost       0.35                 682        85.6           46.9          70.5
+XGBoost       0.40                 629        81.8           48.6          72.2
+XGBoost       0.45                 596        80.2           50.3          73.7
+XGBoost       0.50                 549        77.0           52.5          75.4
+
+TOP 10 FEATURES (XGBoost gain, scaled to 100)
+                           feature  importance  importance_scaled_100
+           Contract_Month-to-month    0.399988                    100
+       InternetService_Fiber optic    0.106343                     27
+                 OnlineSecurity_No    0.063480                     16
+OnlineSecurity_No internet service    0.037851                      9
+                    TechSupport_No    0.035977                      9
+                 Contract_Two year    0.024969                      6
+               StreamingMovies_Yes    0.022966                      6
+               InternetService_DSL    0.020452                      5
+    PaymentMethod_Electronic check    0.019429                      5
+                 Contract_One year    0.017471                      4
+
+TOP 10 FEATURES (permutation importance, test set, ROC-AUC)
+         feature  importance_mean  importance_std
+        Contract         0.084209        0.007013
+          tenure         0.048266        0.002108
+ InternetService         0.011321        0.004492
+    TotalCharges         0.010465        0.003352
+  OnlineSecurity         0.005915        0.001127
+     TechSupport         0.004360        0.001314
+   MultipleLines         0.002916        0.000925
+  MonthlyCharges         0.002864        0.001647
+   PaymentMethod         0.002688        0.001559
+PaperlessBilling         0.001738        0.001651

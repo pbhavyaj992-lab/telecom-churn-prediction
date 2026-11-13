@@ -1,0 +1,34 @@
+feature,value,customers,churned,churn_rate_pct
+OnlineSecurity,No,3498,1461,41.8
+SeniorCitizen,Yes,1142,476,41.7
+TechSupport,No,3473,1446,41.6
+OnlineBackup,No,3088,1233,39.9
+DeviceProtection,No,3095,1211,39.1
+StreamingMovies,No,2785,938,33.7
+PaperlessBilling,Yes,4171,1400,33.6
+StreamingTV,No,2810,942,33.5
+Partner,No,3641,1200,33.0
+Dependents,No,4933,1543,31.3
+StreamingTV,Yes,2707,814,30.1
+StreamingMovies,Yes,2732,818,29.9
+MultipleLines,Yes,2971,850,28.6
+gender,Female,3488,939,26.9
+PhoneService,Yes,6361,1699,26.7
+gender,Male,3555,930,26.2
+MultipleLines,No,3390,849,25.0
+PhoneService,No,682,170,24.9
+MultipleLines,No phone service,682,170,24.9
+SeniorCitizen,No,5901,1393,23.6
+DeviceProtection,Yes,2422,545,22.5
+OnlineBackup,Yes,2429,523,21.5
+Partner,Yes,3402,669,19.7
+PaperlessBilling,No,2872,469,16.3
+Dependents,Yes,2110,326,15.5
+TechSupport,Yes,2044,310,15.2
+OnlineSecurity,Yes,2019,295,14.6
+OnlineSecurity,No internet service,1526,113,7.4
+OnlineBackup,No internet service,1526,113,7.4
+DeviceProtection,No internet service,1526,113,7.4
+TechSupport,No internet service,1526,113,7.4
+StreamingTV,No internet service,1526,113,7.4
+StreamingMovies,No internet service,1526,113,7.4

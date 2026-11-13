@@ -1,0 +1,5 @@
+tenure_band,customers,churned,churn_rate_pct,avg_monthly_charges_usd,avg_tenure_months
+0-12,2186,1037,47.4,56.1,4.7
+13-24,1024,294,28.7,61.36,18.4
+25-48,1594,325,20.4,65.93,36.2
+49-72,2239,213,9.5,73.95,63.0

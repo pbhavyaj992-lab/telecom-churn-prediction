@@ -1,0 +1,5 @@
+PaymentMethod,customers,churned,churn_rate_pct,avg_monthly_charges_usd,avg_tenure_months
+Electronic check,2365,1071,45.3,76.26,25.2
+Mailed check,1612,308,19.1,43.92,21.8
+Bank transfer (automatic),1544,258,16.7,67.19,43.7
+Credit card (automatic),1522,232,15.2,66.51,43.3
